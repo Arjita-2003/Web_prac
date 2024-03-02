@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Web Page</title>
+    <style type="text/css">
+        body{
+            margin: 0;
+            padding: 0;
+            line-height: 0.7cm;
+        }
+
+        #container{
+            height : 100%;
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        #header{
+            background: black;
+            height: 50px;
+            font-family: algerian;
+        }
+
+        #contentwrapper{
+            float: left;
+            width: 100%;
+        }
+
+        #contentcolumn{
+            margin: 0 230px 0 230px;
+            z-index:2;
+        }
+
+        #leftcolumn{
+            float: left;
+            margin-left: -100%;
+            width: 200px;
+            background-color: cyan;
+        }
+
+        #rightcolumn{
+            float: right;
+            margin-left: -230%;
+            width: 200px;
+            background-color: yellow;
+        }
+
+        .innertext{
+            margin: 20px;
+            font-family: Arial;
+            z-index: 3;
+
+        }
+
+        #watermark{
+            position:absolute;
+            opacity:0.4;
+            z-index:1;
+            background-image: url(scenary.jpg);
+        }
+
+        img{
+            background-repeat: repeat;
+        }
+
+        #footer{
+            clear: both;
+            width: 100%;
+            background-color: black;
+            color: #FFF;
+            font-family: Algerian;
+            text-align: center;
+            padding: 15px;
+        }
+
+        ul{
+            list-style-type: none;
+            display:inline;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+        }
+
+        li{
+            float:left;
+            border-right: 1px solid white;
+            display: inline;
+        }
+
+        li:last-child{
+            border-right: none;
+        }
+
+        li a{
+            color:white;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(:active){
+            background-color: palevioletred;
+        }
+
+        .active{
+            background-color: lightskyblue;
+        }
+
+        @media (max-width:840px){
+            #contentcolumn{
+            margin-right: 0;
+            }
+
+            #leftcolumn{
+            margin-left: -100%;
+            }
+
+            #rightcolumn{
+            float: none;
+            margin-left:0;
+            width: 100%;
+            clear: both;
+            }
+        }
+
+        @media (max-width:600px){
+            #contentcolumn{
+            margin-left: 0;
+            }
+
+            #leftcolumn{
+            float: none;
+            margin-left:0;
+            width: 100%;
+            clear: both;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header"><ul>
+            <li><a class="active" href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>  
+            </ul>
+        </div>
+
+        <div id="contentwrapper">
+            <div id="contentcolumn">
+                <div class="innertext">
+                    <b><h2>Welcome!</h2></b>
+                    Deep into that darkness peering,
+                    Long I stood there, wondering, fearing,
+                    Doubting, dreaming dreams no mortals
+                    Ever dared to dream before;
+                    But the silence was unbroken,
+                    And the stillness gave no token,
+                    And the only word there spoken
+                    Was the whispered word, "Lenore!"
+                    This I whispered, and an echo
+                    Murmured back the word, "Lenore!"
+                    Merely this, and nothing more.
+ 
+                </div>
+            </div>
+        </div>
+        <div id="leftcolumn">
+            <div class="innertext">
+                <b><em>Left</em></b>
+                Because I could not stop for Death,
+                He kindly stopped for me;
+                The carriage held but just ourselves
+                And Immortality. <br>
+                Deep into that darkness peering,
+                Long I stood there, wondering, fearing,
+                Doubting, dreaming dreams no mortals
+                Ever dared to dream before;
+                But the silence was unbroken,
+                And the stillness gave no token,
+                And the only word there spoken
+                Was the whispered word, "Lenore!"
+                This I whispered, and an echo
+                Murmured back the word, "Lenore!"
+                Merely this, and nothing more.
+            </div>
+        </div>
+        <div id="rightcolumn">
+            <div class="innertext">
+                <b><em>Right</em></b>
+                And all should cry, Beware! Beware!
+                His flashing eyes, his floating hair!
+                Weave a circle round him thrice,
+                And close your eyes with holy dread
+                For he on honey-dew hath fed,
+                And drunk the milk of Paradise.<br>
+                Because I could not stop for Death,
+                He kindly stopped for me;
+                The carriage held but just ourselves
+                And Immortality.
+            </div>
+        </div>
+        <div id="footer">Footer</div>
+    </div>
+</body>
+</html>
